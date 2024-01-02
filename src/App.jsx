@@ -30,24 +30,34 @@ function App() {
     setProjectState(prevState => {
       return {
        ...prevState,
+       projectStatus: undefined,
        projects: [...projectState.projects, newProjectData],
       }
    })
-
-   console.log(projectState)
   }
+
+  const cancelHandler = () => {
+    setProjectState(prevState => {
+      return {
+       ...prevState,
+       projectStatus: undefined,
+      }
+   })
+  }
+
+  console.log(projectState)
 
   let content;
 
   if (projectState.projectStatus === undefined) {
     content = <NoProjectSelected addProjectHandler={handleAddProject} />;
   } else if (projectState.projectStatus == null) {
-    content = <NewProject onAdd={getProjectDetails} />;
+    content = <NewProject onAdd={getProjectDetails} onCancel={cancelHandler} />;
   }  
 
   return (
     <main className='h-screen my-8 flex gap-8'>
-      <ProjectsSideBar addProjectHandler={handleAddProject} />
+      <ProjectsSideBar addProjectHandler={handleAddProject} projectList={projectState.projects} />
       {content}      
     </main>
   )
