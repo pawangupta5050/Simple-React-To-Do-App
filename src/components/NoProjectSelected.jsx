@@ -1,6 +1,6 @@
 import React from 'react'
 import image from '../assets/no-projects.png'
-import Button from './Button'
+import Button from './Button.jsx'
 
 const NoProjectSelected = (props) => {
   return (

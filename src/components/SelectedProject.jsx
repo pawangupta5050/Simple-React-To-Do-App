@@ -1,5 +1,5 @@
 import React from 'react'
-import Tasks from './Tasks'
+import Tasks from './Tasks.jsx'
 
 const SelectedProject = ({ project, onDelete, onAddTask, onDeleteTask, getTasks }) => {
 

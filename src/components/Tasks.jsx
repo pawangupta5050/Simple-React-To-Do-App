@@ -1,5 +1,5 @@
 import React from 'react'
-import NewTask from './NewTask'
+import NewTask from './NewTask.jsx'
 
 const Tasks = ({addTask, deleteTask, tasks}) => {
   return (
