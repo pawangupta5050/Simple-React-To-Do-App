@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './Button'
 
-const ProjectsSideBar = ({addProjectHandler, projectList, onSelectProject, selectedProjectID}) => {
+const ProjectsSideBar = ({addProjectHandler, projectList, onSelectProject, selectedProjectByID}) => {
   console.log(projectList)
   return ( 
     <aside className='w-1/3 px-8 py-16 bg-stone-900 text-stone-50 md:w-72 rounded-r-xl'>
@@ -13,7 +13,7 @@ const ProjectsSideBar = ({addProjectHandler, projectList, onSelectProject, selec
           {projectList.map((project) => {
             let cssClasses = 'w-full text-left px-2 py-1 rounded-sm my-1 hover:text-stone-200 hover:bg-stone-800'
 
-            if(project.id === selectedProjectID){
+            if(project.id === selectedProjectByID){
               cssClasses += ' text-stone-200 bg-stone-800'
             }else {
               cssClasses += ' text-stone-400'
