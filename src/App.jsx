@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import ProjectsSideBar from './components/ProjectsSideBar.jsx'
+import ProjectsSidebar from './components/ProjectsSideBar.jsx'
 import NewProject from './components/NewProject.jsx'
 import NoProjectSelected from './components/NoProjectSelected.jsx'
 import SelectedProject from './components/SelectedProject.jsx'
@@ -105,7 +105,7 @@ function App() {
 
   return (
     <main className='h-screen my-8 flex gap-8'>
-      <ProjectsSideBar addProjectHandler={handleAddProject} projectList={projectState.projects} onSelectProject={handleProjectSelected} selectedProjectByID={projectState.projectStatus}  />
+      <ProjectsSidebar addProjectHandler={handleAddProject} projectList={projectState.projects} onSelectProject={handleProjectSelected} selectedProjectByID={projectState.projectStatus}  />
       {content}      
     </main>
   )
