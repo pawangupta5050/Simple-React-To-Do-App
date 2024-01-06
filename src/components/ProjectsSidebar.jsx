@@ -5,7 +5,7 @@ const ProjectsSideBar = ({addProjectHandler, projectList, onSelectProject, selec
   console.log(projectList)
   return ( 
     <aside className='w-1/3 px-8 py-16 bg-stone-900 text-stone-50 md:w-72 rounded-r-xl'>
-        <h2 className='mb-8 font-bold uppercase md:text-xl text-stone-200'>Your Projects</h2>
+        <h2 className='mb-8 font-bold uppercase md:text-xl text-stone-300'>Your Projects</h2>
         <div>
             <Button onClick={addProjectHandler}>+ Add Project</Button>
         </div>
